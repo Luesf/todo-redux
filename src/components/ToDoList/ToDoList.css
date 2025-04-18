@@ -1,0 +1,31 @@
+.main-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-container {
+    background-color: rgba(255, 255, 255, 5%);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    height: 600px;
+    width: 70%;
+}
+
+.list-text ul {
+    font-size: 18px;
+}
+
+.list-text li {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.list-text {
+    text-align: left;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: darkgrey;
+}
