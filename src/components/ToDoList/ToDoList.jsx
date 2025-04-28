@@ -15,7 +15,7 @@ function ToDoList() {
     const dispatch = useDispatch();
 
     const handleToggleToDo = (id) => {
-        dispatch(toggleToDo(id));      
+        dispatch(toggleToDo(id));
     }
 
     const filteredList = list.filter((todo) => {
@@ -34,7 +34,15 @@ function ToDoList() {
             <div className='list-container'>
                 <div className='list-text'>
                     <ul>
-                        {filteredList.map((todo) => {return <li onClick={() => handleToggleToDo(todo.id)} key={todo.id} ><p className={todo.completed ? 'strike task' : 'task'}>{todo.text}</p><p className='time'>{todo.time}</p><IconButton type='submit' size='sm' variant='plain' color='danger' onClick={() => handleDelete(todo.id)}><DeleteOutlinedIcon/></IconButton></li>})}
+                        {filteredList.map((todo) => {
+                            return (
+                                <li onClick={() => handleToggleToDo(todo.id)} key={todo.id}>
+                                    <p className={todo.completed ? 'strike task' : 'task'}>{todo.text}</p>
+                                    <p className='time'>{todo.time}</p>
+                                    <IconButton type='submit' size='sm' variant='plain' color='danger' onClick={() => handleDelete(todo.id)}><DeleteOutlinedIcon/></IconButton>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </div>
             </div>
